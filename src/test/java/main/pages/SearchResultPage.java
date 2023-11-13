@@ -32,6 +32,9 @@ import java.util.List;
             bookInfoList.add(bookInfo);
         }
     }
+    public boolean isBookListIsEmpty(){
+        return bookInfoList.isEmpty();
+    }
     public void printProductList(){
         for (BookInfo bookInfo : bookInfoList) {
             System.out.println("Book title: " + bookInfo.getTitle());

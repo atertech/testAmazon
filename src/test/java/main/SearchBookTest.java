@@ -3,6 +3,8 @@ package main;
 import lombok.SneakyThrows;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import main.pages.MainPage;
@@ -29,6 +31,7 @@ public class SearchBookTest {
         File file = new File(properties.getProperty("path"));
         System.setProperty(driverName, file.getAbsolutePath());
         driver = new ChromeDriver();
+
     }
 
     @SneakyThrows
@@ -41,6 +44,8 @@ public class SearchBookTest {
         mainPage.searchNeededBooks();
         SearchResultPage resultPage = new SearchResultPage(driver);
         resultPage.collectProductsInTheList();
+        resultPage.printProductList();
+        Assert.assertFalse(resultPage.isBookListIsEmpty());
     }
 
     @Test(priority = 2)
