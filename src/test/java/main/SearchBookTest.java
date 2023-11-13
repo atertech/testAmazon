@@ -45,7 +45,7 @@ public class SearchBookTest {
         SearchResultPage resultPage = new SearchResultPage(driver);
         resultPage.collectProductsInTheList();
         resultPage.printProductList();
-        Assert.assertTrue(resultPage.isBookListIsEmpty());
+        Assert.assertFalse(resultPage.isBookListIsEmpty());
 
     }
 
