@@ -20,7 +20,7 @@ public class ProductCard {
         bookInfoList = new ArrayList<>();
 
         Thread.sleep(3000);
-        productId = driver.findElement(By.xpath("//div[@data-asin]"));
+        //productId = driver.findElement(By.xpath("//div[@data-asin]"));
 
         String title = getTitle();
         String authorName =getAuthor();
