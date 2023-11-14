@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import main.pages.MainPage;
@@ -31,7 +32,10 @@ public class SearchBookTest {
         File file = new File(properties.getProperty("path"));
         System.setProperty(driverName, file.getAbsolutePath());
         driver = new ChromeDriver();
-
+    }
+    @AfterClass
+    public void afterClass(){
+        driver.quit();
     }
 
     @SneakyThrows

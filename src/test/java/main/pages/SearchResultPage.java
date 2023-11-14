@@ -56,6 +56,9 @@ import java.util.List;
             System.out.println("Book " + neededBook + " not found in the list");
         }
     }
+        public boolean isBookListIsEmpty(){
+            return bookInfoList.isEmpty();
+        }
     class BookInfo {
         private String title;
         private String author;
