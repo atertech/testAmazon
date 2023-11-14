@@ -32,7 +32,7 @@ import java.util.List;
             bookInfoList.add(bookInfo);
         }
     }
-    /*public void printProductList(){
+    public void printProductList(){
         for (BookInfo bookInfo : bookInfoList) {
             System.out.println("Book title: " + bookInfo.getTitle());
             System.out.println("By: " + bookInfo.getAuthor());
@@ -40,7 +40,7 @@ import java.util.List;
             System.out.println("BestSeller: " + bookInfo.isBestseller());
             System.out.println();
         }
-    }*/
+    }
     public void checkIfNeededBookInTheList(){
         boolean isNeededBookFound = false;
         String neededBook = "Head First Java, 2nd Edition";
