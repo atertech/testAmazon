@@ -10,7 +10,6 @@ import java.util.List;
 
     public class SearchResultPage {
     public static List<BookInfo> bookInfoList;
-    public static List<ProductCard> productCardList;
     private final WebDriver driver;
     public SearchResultPage(WebDriver driver){
         this.driver=driver;
@@ -85,6 +84,5 @@ import java.util.List;
         public boolean isBestseller() {
             return bestseller;
         }
-        //test
     }
 }
