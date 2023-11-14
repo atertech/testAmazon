@@ -13,9 +13,10 @@ public class MainPage {
     public MainPage(WebDriver driver){
         this.driver=driver;
     }
-    public void goToAmazonMainPage(){
+    public void goToAmazonMainPage() throws InterruptedException {
         driver.get("https://www.amazon.com/");
         driver.manage().window().maximize();
+        Thread.sleep(2500);
     }
     public void selectBookCategory(){
         WebElement dropDownMenu = driver.findElement(By.xpath("//*[@id=\"searchDropdownBox\"]"));
